@@ -2,8 +2,25 @@ When you first ran your program, a new file called tasks.json was created under 
 
 Above the “${file}” line, add these lines:
 
+- for debug build:
+
 ```json
 "-ggdb",
+"-pedantic-errors",
+"-Wall",
+"-Weffc++",
+"-Wextra",
+"-Wconversion",
+"-Wsign-conversion",
+"-Werror",
+"-std=c++23",
+```
+
+- for release build:
+
+```json
+"-O2",
+"-DNDEBUG",
 "-pedantic-errors",
 "-Wall",
 "-Weffc++",
