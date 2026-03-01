@@ -1,3 +1,23 @@
+When you first ran your program, a new file called tasks.json was created under the .vscode folder in the explorer pane. Open the tasks.json file, find “args”, and then locate the line “${file}” within that section.
+
+Above the “${file}” line, add these lines:
+
+```json
+"-g",
+"-ggdb",
+"-pedantic-errors",
+"-Wall",
+"-Weffc++",
+"-Wextra",
+"-Wconversion",
+"-Wsign-conversion",
+"-Werror",
+"-std=c++23",
+```
+
+so your tasks.json should be something like this:
+
+```json
 {
     "tasks": [
         {
@@ -35,3 +55,4 @@
     ],
     "version": "2.0.0"
 }
+```
