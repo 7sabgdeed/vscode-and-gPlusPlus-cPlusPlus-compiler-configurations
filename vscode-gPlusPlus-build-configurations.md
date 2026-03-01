@@ -3,7 +3,6 @@ When you first ran your program, a new file called tasks.json was created under 
 Above the “${file}” line, add these lines:
 
 ```json
-"-g",
 "-ggdb",
 "-pedantic-errors",
 "-Wall",
